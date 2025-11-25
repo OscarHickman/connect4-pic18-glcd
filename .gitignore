@@ -1,0 +1,50 @@
+# MPLAB X IDE
+*.o
+*.d
+*.pre
+*.p1
+*.lst
+*.sym
+*.obj
+*.hex
+*.cof
+*.map
+*.err
+*.as
+*.rlf
+*.sdb
+
+# Build directories
+build/
+dist/
+nbproject/private/
+nbproject/Package-*.bash
+
+# Debugger files
+*.mcs
+*.mcp
+*.mcw
+*.mptags
+*.mptags_lock
+
+# IDE specific files
+*.X/nbproject/private/
+*.X/nbproject/Package-*.bash
+*.X/build/
+*.X/dist/
+.generated_files/
+
+# OS specific
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Backup files
+*.bak
+*.old
+*.backup
+
+# Log files
+*.log
