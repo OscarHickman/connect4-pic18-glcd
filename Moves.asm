@@ -22,13 +22,13 @@ init	   res 1
 moves	code
 
 move	
-	fill_col1   ;equal to first column
+fill_col1   ;equal to first column
 		movlw	0x01
 		CPFSEQ	key_out	       
 		goto	fill_col2
 		goto	s1
 	    
-		s1
+s1
 			movlw	0x00	;column is empty
 			CPFSEQ	fill_1
 			goto	s2	
@@ -55,7 +55,7 @@ move
 			movwf	last_mov_col
 			return
 		
-		s2
+s2
 			movlw	0x01	;column has 1 item
 			CPFSEQ	fill_1  
 			goto s3
@@ -82,7 +82,7 @@ move
 			movwf	last_mov_col
 			return
 		
-		s3
+s3
 			movlw	0x02	;column has 2 items
 			CPFSEQ	fill_1
 			goto s4
@@ -110,7 +110,7 @@ move
 			return
 			
 			
-		s4
+s4
 			movlw	0x03	;column has 3 items
 			CPFSEQ	fill_1 
 			goto s5
@@ -138,7 +138,7 @@ move
 			return
 			
 			
-		s5	
+s5	
 			movlw	0x04	;column has 4 items
 			CPFSEQ	fill_1	  
 			goto s6
@@ -165,7 +165,7 @@ move
 			movwf	last_mov_col
 			return
 			
-		s6
+s6
 			movlw	0x05	;column has 5 items
 			CPFSEQ	fill_1	  
 			goto	Back
@@ -195,13 +195,13 @@ move
 			
 			
 	    
-	fill_col2   ;equal to second column
+fill_col2   ;equal to second column
 		movlw	0x02
 		CPFSEQ	key_out	       
 		goto	fill_col3
 		goto	s7
 	
-		s7
+s7
 			movlw	0x00	;column is empty
 			CPFSEQ	fill_2
 			goto	s8	
@@ -228,7 +228,7 @@ move
 			movwf	last_mov_col
 			return
 		
-		s8
+s8
 			movlw	0x01	;column has 1 item
 			CPFSEQ	fill_2  
 			goto	s9
@@ -255,7 +255,7 @@ move
 			movwf	last_mov_col
 			return
 		
-		s9
+s9
 			movlw	0x02	;column has 2 items
 			CPFSEQ	fill_2
 			goto	s10
@@ -283,7 +283,7 @@ move
 			return
 			
 			
-		s10
+s10
 			movlw	0x03	;column has 3 items
 			CPFSEQ	fill_2
 			goto	s11
@@ -311,7 +311,7 @@ move
 			return
 			
 			
-		s11	
+s11	
 			movlw	0x04	;column has 4 items
 			CPFSEQ	fill_2	  
 			goto	s12
@@ -338,7 +338,7 @@ move
 			movwf	last_mov_col
 			return
 			
-		s12
+s12
 			movlw	0x05	;column has 5 items
 			CPFSEQ	fill_2	  
 			goto	Back
@@ -371,13 +371,13 @@ move
 			
 			
 	    
-	fill_col3   ;equal to third column
+fill_col3   ;equal to third column
 		movlw	0x03
 		CPFSEQ	key_out	       
 		goto	fill_col4
 		goto	s13
 		
-		s13
+s13
 			movlw	0x00	;column is empty
 			CPFSEQ	fill_3
 			goto	s14	
@@ -404,7 +404,7 @@ move
 			movwf	last_mov_col
 			return
 		
-		s14
+s14
 			movlw	0x01	;column has 1 item
 			CPFSEQ	fill_3  
 			goto	s15
@@ -431,7 +431,7 @@ move
 			movwf	last_mov_col
 			return
 		
-		s15
+s15
 			movlw	0x02	;column has 2 items
 			CPFSEQ	fill_3
 			goto	s16
@@ -459,7 +459,7 @@ move
 			return
 			
 			
-		s16
+s16
 			movlw	0x03	;column has 3 items
 			CPFSEQ	fill_3 
 			goto	s17
@@ -487,7 +487,7 @@ move
 			return
 			
 			
-		s17	
+s17	
 			movlw	0x04	;column has 4 items
 			CPFSEQ	fill_3	  
 			goto	s18
@@ -514,7 +514,7 @@ move
 			movwf	last_mov_col
 			return
 			
-		s18
+s18
 			movlw	0x05	;column has 5 items
 			CPFSEQ	fill_3	  
 			goto	Back
@@ -545,13 +545,13 @@ move
 	    
 	    
 	    
-	fill_col4   ;equal to fourth column	(middle)
+fill_col4   ;equal to fourth column	(middle)
 		movlw	0x04
 		CPFSEQ	key_out	       
 		goto	fill_col5
 		goto	s19
 		
-		s19
+s19
 			movlw	0x00	;column is empty
 			CPFSEQ	fill_4
 			goto	s20	
@@ -587,7 +587,7 @@ move
 			movwf	last_mov_col
 			return
 		
-		s20
+s20
 			movlw	0x01	;column has 1 item
 			CPFSEQ	fill_4  
 			goto	s21
@@ -624,7 +624,7 @@ move
 			movwf	last_mov_col
 			return
 		
-		s21
+s21
 			movlw	0x02	;column has 2 items
 			CPFSEQ	fill_4
 			goto	s22
@@ -662,7 +662,7 @@ move
 			return
 			
 			
-		s22
+s22
 			movlw	0x03	;column has 3 items
 			CPFSEQ	fill_4 
 			goto	s23
@@ -700,7 +700,7 @@ move
 			return
 			
 			
-		s23	
+s23	
 			movlw	0x04	;column has 4 items
 			CPFSEQ	fill_4	  
 			goto	s24
@@ -737,7 +737,7 @@ move
 			movwf	last_mov_col
 			return
 			
-		s24
+s24
 			movlw	0x05	;column has 5 items
 			CPFSEQ	fill_4	  
 			goto	Back
@@ -776,13 +776,13 @@ move
 			
 	    
 	    
-	fill_col5   ;equal to fifth column
+fill_col5   ;equal to fifth column
 		movlw	0x05
 		CPFSEQ	key_out	       
 		goto	fill_col6
 		goto	s25
 		
-		s25
+s25
 			movlw	0x00	;column is empty
 			CPFSEQ	fill_5
 			goto	s26	
@@ -811,7 +811,7 @@ move
 			movwf	last_mov_col
 			return
 		
-		s26
+s26
 			movlw	0x01	;column has 1 item
 			CPFSEQ	fill_5
 			goto	s27
@@ -838,7 +838,7 @@ move
 			movwf	last_mov_col
 			return
 		
-		s27
+s27
 			movlw	0x02	;column has 2 items
 			CPFSEQ	fill_5
 			goto	s28
@@ -866,7 +866,7 @@ move
 			return
 			
 			
-		s28
+s28
 			movlw	0x03	;column has 3 items
 			CPFSEQ	fill_5
 			goto	s29
@@ -894,7 +894,7 @@ move
 			return
 			
 			
-		s29	
+s29	
 			movlw	0x04	;column has 4 items
 			CPFSEQ	fill_5
 			goto	s30
@@ -921,7 +921,7 @@ move
 			movwf	last_mov_col
 			return
 			
-		s30
+s30
 			movlw	0x05	;column has 5 items
 			CPFSEQ	fill_5 
 			goto	Back
@@ -950,13 +950,13 @@ move
 			
 	    
 	    
-	fill_col6   ;equal to sixth column
+fill_col6   ;equal to sixth column
 		movlw	0x06
 		CPFSEQ	key_out	       
 		goto	fill_col7
 		goto	s31
 		
-		s31
+s31
 			movlw	0x00	;column is empty
 			CPFSEQ	fill_6
 			goto	s32	
@@ -983,7 +983,7 @@ move
 			movwf	last_mov_col
 			return
 		
-		s32
+s32
 			movlw	0x01	;column has 1 item
 			CPFSEQ	fill_6
 			goto	s33
@@ -1010,7 +1010,7 @@ move
 			movwf	last_mov_col
 			return
 		
-		s33
+s33
 			movlw	0x02	;column has 2 items
 			CPFSEQ	fill_6
 			goto	s34
@@ -1038,7 +1038,7 @@ move
 			return
 			
 			
-		s34
+s34
 			movlw	0x03	;column has 3 items
 			CPFSEQ	fill_6 
 			goto	s35
@@ -1066,7 +1066,7 @@ move
 			return
 			
 			
-		s35	
+s35	
 			movlw	0x04	;column has 4 items
 			CPFSEQ	fill_6	  
 			goto	s36
@@ -1093,7 +1093,7 @@ move
 			movwf	last_mov_col
 			return
 			
-		s36
+s36
 			movlw	0x05	;column has 5 items
 			CPFSEQ	fill_6	  
 			goto	Back
@@ -1121,10 +1121,10 @@ move
 			return
 	    
 	    
-	fill_col7   ;equal to seventh column
+fill_col7   ;equal to seventh column
 		goto	s37
 		
-		s37
+s37
 			movlw	0x00	;column is empty
 			CPFSEQ	fill_7
 			goto	s38	
@@ -1151,7 +1151,7 @@ move
 			movwf	last_mov_col
 			return
 		
-		s38
+s38
 			movlw	0x01	;column has 1 item
 			CPFSEQ	fill_7
 			goto	s39
@@ -1178,7 +1178,7 @@ move
 			movwf	last_mov_col
 			return
 		
-		s39
+s39
 			movlw	0x02	;column has 2 items
 			CPFSEQ	fill_7
 			goto	s40
@@ -1206,7 +1206,7 @@ move
 			return
 			
 			
-		s40
+s40
 			movlw	0x03	;column has 3 items
 			CPFSEQ	fill_7
 			goto	s41
@@ -1234,7 +1234,7 @@ move
 			return
 			
 			
-		s41
+s41
 			movlw	0x04	;column has 4 items
 			CPFSEQ	fill_7  
 			goto	s42
@@ -1261,7 +1261,7 @@ move
 			movwf	last_mov_col
 			return
 			
-		s42
+s42
 			movlw	0x05	;column has 5 items
 			CPFSEQ	fill_7
 			goto	Back
@@ -1308,7 +1308,7 @@ fill_square
 	goto	write_cross
 	
 	
-	write_naught	;can write a naught (not possible with middle square)
+write_naught	;can write a naught (not possible with middle square)
 		movlw	0x01	
 		call	d_w	;col_0 of square
 		call	d_w	;col_1 of square
@@ -1335,7 +1335,7 @@ fill_square
 		
 		
 		
-	write_cross	;can write a cross (not possible with middle square)
+write_cross	;can write a cross (not possible with middle square)
 	
 		movlw	0x01	
 		call	d_w	;col_0 of square
@@ -1375,7 +1375,7 @@ midleft	    ;fills the left half of the middle squares
 	goto	write_naught_left
 	goto	write_cross_left
 	
-	write_naught_left
+write_naught_left
 		movlw	0x01	
 		call	d_w	;col_0 of square
 		call	d_w	;col_1 of square
@@ -1389,7 +1389,7 @@ midleft	    ;fills the left half of the middle squares
 		call	d_w	;col_7 of square
 		return
 	
-	write_cross_left
+write_cross_left
 		movlw	0x01	
 		call	d_w	;col_0 of square
 		call	d_w	;col_1 of square
@@ -1413,7 +1413,7 @@ midright    ;fills the right half of the middle squares
 	goto	write_naught_right
 	goto	write_cross_right
 	
-	write_naught_right
+write_naught_right
 		movlw	0x45    
 	        call	d_w	;col_8 of square
 		call	d_w	;col_9 of square
@@ -1426,7 +1426,7 @@ midright    ;fills the right half of the middle squares
 		call	d_w	;col_14 of square
 		return
 	
-	write_cross_right
+write_cross_right
 		movlw	0x39    
 	        call	d_w	;col_8 of square
 		movlw	0x6D
@@ -1447,48 +1447,48 @@ midright    ;fills the right half of the middle squares
 digital_write ;writes data to the stored version 'squares'
 	goto first_digital_row_write
 		
-	first_digital_row_write   ;first row
+first_digital_row_write   ;first row
 		movlw	0x00
 		cpfseq	target_row
 		goto	second_digital_row_write
 		lfsr    FSR1, squares0
 		goto	digital_column_write
 		
-	second_digital_row_write  ;second row
+second_digital_row_write  ;second row
 		movlw	0x01
 		cpfseq	target_row
 		goto	third_digital_row_write
 		lfsr    FSR1, squares1
 		goto	digital_column_write
 	
-	third_digital_row_write  ;third row
+third_digital_row_write  ;third row
 		movlw	0x02
 		cpfseq	target_row
 		goto	fourth_digital_row_write
 		lfsr    FSR1, squares2
 		goto	digital_column_write
 	
-	fourth_digital_row_write  ;fourth row
+fourth_digital_row_write  ;fourth row
 		movlw	0x03
 		cpfseq	target_row
 		goto	fifth_digital_row_write
 		lfsr    FSR1, squares3
 		goto	digital_column_write
 	
-	fifth_digital_row_write  ;fifth row
+fifth_digital_row_write  ;fifth row
 		movlw	0x04
 		cpfseq	target_row
 		goto	sixth_digital_row_write
 		lfsr    FSR1, squares4
 		goto	digital_column_write
 	
-	sixth_digital_row_write  ;sixth row
+sixth_digital_row_write  ;sixth row
 		lfsr    FSR1, squares5
 		goto	digital_column_write
 	
 
 	
-	digital_column_write
+digital_column_write
 		movlw	0x00
 		cpfseq	init
 		goto	digital_write_empty
@@ -1506,17 +1506,17 @@ digital_write ;writes data to the stored version 'squares'
 		goto	digital_write_cross
 	
 	
-			digital_write_naught
+digital_write_naught
 				movlw   0x01
 				movwf   INDF1   ; move data from W to given byte (move from f to w to read)
 				return
 	
-			digital_write_cross
+digital_write_cross
 				movlw   0x02
 				movwf   INDF1
 				return
 				
-			digital_write_empty
+digital_write_empty
 				movlw	0x00
 				movwf	POSTINC1
 				movwf	POSTINC1
@@ -1531,75 +1531,75 @@ digital_write ;writes data to the stored version 'squares'
 digital_read ;reads data from the stored version 'naughts'. moves to W
 	goto check1
 	
-	check1
+check1
 		movlw	0x00
 		cpfslt	target_row  ;skips if target row is less than 0
 		goto	check2
 		goto	not_poss
 	
-	check2
+check2
 		movlw	0x05
 		cpfsgt	target_row  ;skips if target row is greater than 5
 		goto	check3
 		goto	not_poss
 	
 	
-	check3
+check3
 		movlw	0x00
 		cpfslt	target_col  ;skips if target column is less than 0
 		goto	check4
 		goto	not_poss
 	
 	
-	check4
+check4
 	        movlw	0x06
 		cpfsgt	target_col  ;skips if target column is greater than 5
 	        goto	first_digital_row_read
 		goto	not_poss
 		
 	
-	first_digital_row_read   ;first row
+first_digital_row_read   ;first row
 		movlw	0x00
 		cpfseq	target_row
 		goto	second_digital_row_read
 		lfsr    FSR1, squares0
 		goto	digital_column_read
 		
-	second_digital_row_read  ;second row
+second_digital_row_read  ;second row
 		movlw	0x01
 		cpfseq	target_row
 		goto	third_digital_row_read
 		lfsr    FSR1, squares1
 		goto	digital_column_read
 	
-	third_digital_row_read  ;third row
+third_digital_row_read  ;third row
 		movlw	0x02
 		cpfseq	target_row
 		goto	fourth_digital_row_read
 		lfsr    FSR1, squares2
 		goto	digital_column_read
 	
-	fourth_digital_row_read  ;fourth row
+fourth_digital_row_read  ;fourth row
 		movlw	0x03
 		cpfseq	target_row
 		goto	fifth_digital_row_read
 		lfsr    FSR1, squares3
 		goto	digital_column_read
 	
-	fifth_digital_row_read  ;fifth row
+fifth_digital_row_read  ;fifth row
 		movlw	0x04
 		cpfseq	target_row
 		goto	sixth_digital_row_read
 		lfsr    FSR1, squares4
 		goto	digital_column_read
 	
-	sixth_digital_row_read  ;sixth row
+sixth_digital_row_read  ;sixth row
 		lfsr    FSR1, squares5
 		goto	digital_column_read
 	
 	
 		
-	digital_column_read	
+digital_column_read	
 		;increment FSR1 by number of column (FSR1) gives the location
 		movf   target_col, W
 		addwf   FSR1L
@@ -1608,7 +1608,7 @@ digital_read ;reads data from the stored version 'naughts'. moves to W
 		movf   INDF1, W   ; move data from position to W
 		return
     
-	not_poss
+not_poss
 		;row or column not possible
 		movlw	0x00
 		return

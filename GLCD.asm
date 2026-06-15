@@ -76,7 +76,7 @@ glcd_grid
 	clrf	ct3	;counts its done all 6 rows
 	
 	
-	bigloop	    ;writes a line then 16 one with the top filled, x3, then a full, then 8 empties all x6 
+bigloop	    ;writes a line then 16 one with the top filled, x3, then a full, then 8 empties all x6 
 	    incf    ct3	
 	    movf    x_ad, W
 	    call    c_w
@@ -127,7 +127,7 @@ glcd_grid
 	clrf	ct3	;counts its done all 6 rows
 	
 	
-	bigloop2	    ;writes a line then 16 one with the top filled, x3, then a full, then 8 empties all x6 
+bigloop2	    ;writes a line then 16 one with the top filled, x3, then a full, then 8 empties all x6 
 	    incf    ct3	
 	    movf    x_ad, W
 	    call    c_w
@@ -171,13 +171,13 @@ glcd_grid
 threesquare	;writes a full one, then 16 one at top, all times 3
 	clrf	ct2	;checks for three times 
 	
-	loop16
+loop16
 	        incf    ct2
 	        movlw   0xFF
 	        call    d_w
 		clrf	ct  ;checks for 16 times
 	
-		sixteen
+sixteen
 			movlw   0x01
 			call    d_w
 			incf    ct

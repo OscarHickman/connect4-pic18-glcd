@@ -11,7 +11,7 @@ Winner	code
 
 
 won   
-	br1
+br1
 		;br1 checks if any are bottom right of it, if not goto bl1
 		movff	last_mov_row, target_row
 		movlw	0x01
@@ -24,7 +24,7 @@ won
 		goto	br2
 
 	
-	br2
+br2
 		;br2 checks if 2 are bottom right of it, if not goto br5
 		movlw	0x01
 		subwf	target_row
@@ -34,7 +34,7 @@ won
 		goto	br5
 		goto	br3
 	
-	br3
+br3
 		;br3 checks if 3 are botom right of it, if not goto br4  -  if so goto winnerscreen
 		movlw	0x01
 		subwf	target_row
@@ -45,7 +45,7 @@ won
 		goto	winnerscreen
 		
 	
-	br4
+br4
 		;br4 checks if 1 top left of it (2 already bottom right), if not goto bl1 - if so goto winnerscreen
 		movlw	0x04
 		addwf	target_row
@@ -56,7 +56,7 @@ won
 		goto	winnerscreen
 		
 	
-	br5	
+br5	
 		;br5 checks if 1 top left of it, (1 already bottom right), if not goto bl1
 		movlw	0x03
 		addwf	target_row
@@ -67,7 +67,7 @@ won
 		goto	br6
 		
 	
-	br6	
+br6	
 		;br6 checks if 2 top left of it, (1 already bottom right), if not goto bl1 - if so goto winnerscreen
 		movlw	0x01
 		addwf	target_row
@@ -80,7 +80,7 @@ won
 
 	
 	
-	bl1
+bl1
 	    	;bl1 checks if 1 bottom left of it, if not goto b1
 		movff	last_mov_row, target_row
 		movlw	0x01
@@ -93,7 +93,7 @@ won
 		goto	bl2
 		
 	
-	bl2
+bl2
 		;bl2 checks if 2 bottom left of it, if not goto bl5
 		movlw	0x01
 		subwf	target_row
@@ -104,7 +104,7 @@ won
 		goto	bl3
 		
 	
-	bl3
+bl3
 		;bl3 checks if 3 are bottom left of it, if not goto bl4  -  if so goto winnerscreen
 		movlw	0x01
 		subwf	target_row
@@ -115,7 +115,7 @@ won
 		goto	winnerscreen
 		
 	
-	bl4
+bl4
 		;bl4 checks if 1 top right of it (2 already bottom left), if not goto b1- if so goto winnerscreen
 		movlw	0x04
 		addwf	target_row
@@ -126,7 +126,7 @@ won
 		goto	winnerscreen
 		
 	
-	bl5	
+bl5	
 		;bl5 checks if 1 top right of it, (1 already bottom left), if not goto b1
 		movlw	0x03
 		addwf	target_row
@@ -137,7 +137,7 @@ won
 		goto	bl6
 		
 	
-	bl6
+bl6
 		;bl6 checks if 2 top right of it, (1 already bottom left), if not goto b1 - if so goto winnerscreen
 		movlw	0x01
 		addwf	target_row
@@ -151,7 +151,7 @@ won
 	
 	
 
-	b1   
+b1   
 		;b1 checks if 1 below it, if not goto tr1 - if so goto b2
 		movff	last_mov_row, target_row
 		movlw	0x01
@@ -163,7 +163,7 @@ won
 		goto	b2
 			
 	
-	b2
+b2
 		;b2  checks if 2 below it, if not goto tr1
 		movlw	0x01
 		subwf	target_row
@@ -173,7 +173,7 @@ won
 		goto	b3
 		
 	
-	b3
+b3
 		;b3 checks if 3 are below it, if not goto tr1 - if so goto winnerscreen
 		movlw	0x01
 		subwf	target_row
@@ -186,7 +186,7 @@ won
 	
 	
 	
-	tr1
+tr1
 		;tr1 checks if any are top right of it, if not goto tl1
 		movff	last_mov_row, target_row
 		movlw	0x01
@@ -199,7 +199,7 @@ won
 		goto	tr2
 		
 	
-	tr2
+tr2
 		;tr2 checks if 2 top right of it, if not goto tr5
 		movlw	0x01
 		addwf	target_row
@@ -210,7 +210,7 @@ won
 		goto	tr3
 		
 	
-	tr3
+tr3
 		;tr3 checks if 3 are top right of it, if not goto tr4  -  if so goto winnerscreen
 		movlw	0x01
 		addwf	target_row
@@ -221,7 +221,7 @@ won
 		goto	winnerscreen
 		
 	
-	tr4
+tr4
 		;tr4 checks if 1 bottom left of it (2 already top right), if not goto tl1- if so goto winnerscreen
 		movlw	0x04
 		subwf	target_row
@@ -232,7 +232,7 @@ won
 		goto	winnerscreen
 		
 	
-	tr5
+tr5
 		;tr5 checks if 1 bottom left of it, (1 already top right), if not goto tl1
 		movlw	0x03
 		subwf	target_row
@@ -243,7 +243,7 @@ won
 		goto	tr6
 		
 
-	tr6
+tr6
 		;tr6 checks if 2 bottom left of it, (1 already top right), if not goto tl1 - if so goto winnerscreen
 		movlw	0x01
 		subwf	target_row
@@ -257,7 +257,7 @@ won
 	
 	
 	
-	tl1
+tl1
 		;tl1 checks if 1 top left of it, if not goto l1
 		movff	last_mov_row, target_row
 		movlw	0x01
@@ -270,7 +270,7 @@ won
 		goto	tl2
 		
 	
-	tl2
+tl2
 		;tl2 checks if 2 top left of it, if not goto tl5
 		movlw	0x01
 	    	addwf	target_row
@@ -281,7 +281,7 @@ won
 		goto	tl3
 		
 	
-	tl3
+tl3
 		;tl3 checks if 3 are top left of it, if not goto tl4  -  if so goto winnerscreen
 	        movlw	0x01
 	        addwf	target_row
@@ -292,7 +292,7 @@ won
 		goto	winnerscreen
 			
 	
-	tl4
+tl4
 		;tl4 checks if 1 bottom right of it (2 already top left), if not goto - if so goto winnerscreen
 		movlw	0x04
 		subwf	target_row
@@ -303,7 +303,7 @@ won
 		goto	winnerscreen
 		
 	
-	tl5
+tl5
 		;tl5 checks if 1 bottom right of it, (1 already top left), if not goto l1
 		movlw	0x03
 		subwf	target_row
@@ -314,7 +314,7 @@ won
 		goto	tl6
 			
 	
-	tl6
+tl6
 		;tl6 checks if 2 bottom right of it, (1 already top left), if not goto l1 - if so goto winnerscreen
 		movlw	0x01
 		subwf	target_row
@@ -328,7 +328,7 @@ won
 	
 	
 	
-	l1
+l1
 		;l1 checks if 1 left of it, if not goto r1
 		movff	last_mov_row, target_row
 	    	movlw	0x01
@@ -340,7 +340,7 @@ won
 		goto	l2
 			
 	
-	l2
+l2
 		;l2 checks if 2 left of it, if not goto l5
 		movlw	0x01
 		subwf	target_col
@@ -350,7 +350,7 @@ won
 		goto	l3
 		
 	
-	l3
+l3
 		;l3 checks if 3 are left of it, if not goto l4  -  if so goto winnerscreen
 		movlw	0x01
 		subwf	target_col
@@ -360,7 +360,7 @@ won
 		goto	winnerscreen
 		
 	    
-	l4
+l4
 		;l4 checks if 1 right of it (2 already left), if not goto r1 - if so goto winnerscreen
 		movlw	0x04
 		addwf	target_col
@@ -370,7 +370,7 @@ won
 		goto	winnerscreen
 		
 	
-	l5
+l5
 		;l5 checks if 1 right of it, (1 already left), if not goto r1
 		movlw	0x03
 		addwf	target_col
@@ -380,7 +380,7 @@ won
 		goto	l6
 		
 	
-	l6
+l6
 		;l6 checks if 2 right of it, (1 already left), if not goto r1 - if so goto winnerscreen
 		movlw	0x01
 		addwf	target_col
@@ -393,7 +393,7 @@ won
 	
 
 	
-	r1
+r1
 		;r1 checks if any are right of it, if not goto n
 		movff	last_mov_row, target_row
 		movlw	0x01
@@ -405,7 +405,7 @@ won
 		goto	r2
 		
 	
-	r2
+r2
 		;r2 checks if 2 right of it, if not goto r5
 		movlw	0x01
 		addwf	target_col
@@ -415,7 +415,7 @@ won
 		goto	r3
 		
 	
-	r3
+r3
 		;r3 checks if 3 are right of it, if not goto r4  -  if so goto winnerscreen
 		movlw	0x01
 	    	addwf	target_col
@@ -425,7 +425,7 @@ won
 		goto	winnerscreen
 				
 	
-	r4
+r4
 		;r4 checks if 1 left of it (2 already right), if not goto nw - if so goto winnerscreen
 		movlw	0x04
 		subwf	target_col
@@ -436,7 +436,7 @@ won
 		
 	
 	
-	r5
+r5
 		;r5 checks if 1 left of it, (1 already right), if not goto n
 		movlw	0x03
 		subwf	target_col
@@ -448,7 +448,7 @@ won
 	
 	
 	
-	r6
+r6
 		;r6 checks if 2 left of it, (1 already right), if not goto n - if so goto winnerscreen
 		movlw	0x01
 	    	subwf	target_col
@@ -461,20 +461,20 @@ won
 	
 	
 
-	nw
+nw
 		;nw return cos no-ones won
 		return
 
 	
 
-	winnerscreen
+winnerscreen
 		movlw	0x00
 		cpfseq	go
 		goto	naughts_win
 		goto	crosses_win
 		
 			
-		naughts_win
+naughts_win
 			call	glcd_start_left
 			movlw	0xB8	;sets x = 0	
 			call	c_w
@@ -819,7 +819,7 @@ won
 			goto	game_reset
 		
 			
-		crosses_win
+crosses_win
 			call	glcd_start_left
 			movlw	0xB8	;sets x = 0	
 			call	c_w
@@ -1147,9 +1147,9 @@ won
 		
 			
 			
-		Clear_row
+Clear_row
 			clrf	temp
-			loop64
+loop64
 				movlw	0x00
 				call	d_w
 				incf	temp
