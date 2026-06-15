@@ -99,7 +99,7 @@ cd connect4_glcd
 
 - **Architecture Details**: See [ARCHITECTURE.md](ARCHITECTURE.md)
 - **Hardware Specs**: See [HARDWARE.md](HARDWARE.md)
-- **Full Documentation**: See [README.md](README.md)
+- **Full Documentation**: See [README.md](../README.md)
 
 ## 🆘 Still Having Issues?
 
