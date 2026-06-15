@@ -201,13 +201,15 @@ The `config.asm` file contains all configuration bits:
 - Board reset requires system restart or game reset function
 - Maximum 42 moves per game (7 columns × 6 rows)
 
-## 🛠️ Potential Enhancements
+## 📝 TODO / Future Enhancements
 
-- Add LCD status messages
-- Implement UART for score tracking
-- Add sound effects via buzzer
-- Create game reset button without power cycle
-- Implement difficulty levels with AI opponent
+- [ ] **AI Opponent**: Implement a single-player mode with an AI opponent (e.g. Minimax algorithm).
+- [ ] **Move Undo**: Support stack-based move history to allow undoing moves.
+- [ ] **Animations**: Add piece drop animations on the GLCD.
+- [ ] **Sound Effects**: Add audio feedback for turns, drops, and win conditions using a buzzer.
+- [ ] **Game Reset Button**: Create a game reset function without requiring a physical power cycle.
+- [ ] **Score Tracking**: Implement score and game statistics tracking (e.g. via UART or external memory).
+- [ ] **LCD Status Messages**: Integrate text-based status updates.
 
 ## 📄 License
 
