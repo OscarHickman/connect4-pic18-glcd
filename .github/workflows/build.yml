@@ -1,0 +1,52 @@
+name: PIC18 Assembly Build
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    name: Build & Verify
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Install gputils
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gputils
+
+      - name: Assemble Files
+        run: |
+          gpasm -c "Main.asm"
+          gpasm -c "config.asm"
+          gpasm -c "GLCD.asm"
+          gpasm -c "Keypad.asm"
+          gpasm -c "Moves.asm"
+          gpasm -c "Turns.asm"
+          gpasm -c "Winner.asm"
+          gpasm -c "LCD.asm"
+          gpasm -c "LED.asm"
+          gpasm -c "UART.asm"
+          gpasm -c "External Memory.asm"
+          gpasm -c "Other.asm"
+
+      - name: Link Objects
+        run: |
+          gplink -m -o connect4.hex \
+            Main.o \
+            config.o \
+            GLCD.o \
+            Keypad.o \
+            Moves.o \
+            Turns.o \
+            Winner.o \
+            LCD.o \
+            LED.o \
+            UART.o \
+            "External Memory.o" \
+            Other.o
