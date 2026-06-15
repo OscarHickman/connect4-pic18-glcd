@@ -22,22 +22,22 @@ jobs:
 
       - name: Assemble Files
         run: |
-          gpasm -c "Main.asm"
-          gpasm -c "config.asm"
-          gpasm -c "GLCD.asm"
-          gpasm -c "Keypad.asm"
-          gpasm -c "Moves.asm"
-          gpasm -c "Turns.asm"
-          gpasm -c "Winner.asm"
-          gpasm -c "LCD.asm"
-          gpasm -c "LED.asm"
-          gpasm -c "UART.asm"
-          gpasm -c "External Memory.asm"
-          gpasm -c "Other.asm"
+          gpasm -p 18f87k22 -c "Main.asm"
+          gpasm -p 18f87k22 -c "config.asm"
+          gpasm -p 18f87k22 -c "GLCD.asm"
+          gpasm -p 18f87k22 -c "Keypad.asm"
+          gpasm -p 18f87k22 -c "Moves.asm"
+          gpasm -p 18f87k22 -c "Turns.asm"
+          gpasm -p 18f87k22 -c "Winner.asm"
+          gpasm -p 18f87k22 -c "LCD.asm"
+          gpasm -p 18f87k22 -c "LED.asm"
+          gpasm -p 18f87k22 -c "UART.asm"
+          gpasm -p 18f87k22 -c "External Memory.asm"
+          gpasm -p 18f87k22 -c "Other.asm"
 
       - name: Link Objects
         run: |
-          gplink -m -o connect4.hex \
+          gplink -p 18f87k22 -m -o connect4.hex \
             Main.o \
             config.o \
             GLCD.o \
