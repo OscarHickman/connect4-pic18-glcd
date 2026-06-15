@@ -30,7 +30,7 @@ start
     goto    Connect4loop
     
     
-    Initialisation
+Initialisation:
 	    clrf	go
 	    movlw	0x02
 	    movwf	active_go
@@ -52,7 +52,7 @@ start
 	
 	
 	
-	Connect4loop
+Connect4loop:
 		call turn   ;switch to others go
 		
 		call Keypad_test
