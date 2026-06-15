@@ -25,11 +25,6 @@ This project implements a fully functional Connect 4 game on a PIC18F87K22 micro
 
 ```
 connect4_glcd/
-├── docs/                 # Detailed documentation files
-│   ├── ARCHITECTURE.md   # System architecture and memory map
-│   ├── HARDWARE.md       # Pin configuration and wiring guide
-│   ├── QUICKSTART.md     # Rapid installation and usage checklist
-│   └── PUBLISHING.md     # Repository publishing and sharing guide
 ├── Main.asm              # Main program loop and initialization
 ├── config.asm            # PIC18F87K22 configuration bits
 ├── GLCD.asm              # GLCD driver and display functions
@@ -43,14 +38,6 @@ connect4_glcd/
 ├── External Memory.asm   # External memory management
 └── Other.asm             # Utility functions
 ```
-
-### 📖 Documentation Links
-
-For further information on setting up and working with this project, check the following resources:
-- **[Quick Start Guide](docs/QUICKSTART.md)**: Steps to wire up the hardware and flash the code.
-- **[Hardware Specifications](docs/HARDWARE.md)**: Detailed wiring diagrams and pin definitions.
-- **[Architecture & Memory Map](docs/ARCHITECTURE.md)**: Detailed descriptions of code modules, logic flow, and RAM usage.
-- **[Publishing Checklist](docs/PUBLISHING.md)**: Guide to preparing the repository for GitHub and sharing it.
 
 ## 🎯 How It Works
 
